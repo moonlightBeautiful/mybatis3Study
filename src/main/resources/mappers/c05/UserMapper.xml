@@ -21,4 +21,15 @@
     <select id="searchUsersMultiParam" resultMap="UserResult">
 		select * from t_user where name like #{param1} and age=#{param2}
 	</select>
+
+    <select id="findUsersByPhysicalPaging" resultMap="UserResult" flushCache="false" useCache="true">
+		select * from t_user
+	</select>
+
+    <select id="findUsersByLogicalPaging" parameterType="Map" resultMap="UserResult">
+        select * from t_user
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
 </mapper> 

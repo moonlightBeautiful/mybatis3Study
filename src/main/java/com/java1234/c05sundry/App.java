@@ -9,7 +9,9 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.log4j.Logger;
 
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Hello world!
@@ -51,8 +53,25 @@ public class App {
             outputStream.write(pic);
             outputStream.close();*/
             //查询用户：多参数
-            logger.info("查询用户(照片longblob（byte[]）和评论longtext（String）)，多参数");
+           /* logger.info("查询用户(照片longblob（byte[]）和评论longtext（String）)，多参数");
             List<User> userList = userMapper.searchUsersMultiParam("%3%", 12);
+            for (User user : userList) {
+                System.out.println(user);
+            }*/
+            //物理分页
+            /*logger.info("查询用户，物理分页");
+            int offset = 0, limit = 3;
+            RowBounds rowBounds = new RowBounds(offset, limit);
+            List<User> userList = userMapper.findUsersByPhysicalPaging(rowBounds);
+            for (User user : userList) {
+                System.out.println(user);
+            }*/
+            //逻辑分页
+            logger.info("查询用户，逻辑分页");
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("start", 1);
+            map.put("size", 3);
+            List<User> userList = userMapper.findUsersByLogicalPaging(map);
             for (User user : userList) {
                 System.out.println(user);
             }
