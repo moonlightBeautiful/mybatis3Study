@@ -8,16 +8,13 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.log4j.Logger;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * Hello world!
  */
 public class App {
-
     private static Logger logger = Logger.getLogger(App.class);
 
     public static void main(String[] args) {
@@ -29,46 +26,40 @@ public class App {
             sqlSession = sqlSessionFactory.openSession();
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 
-            //
-            User user = new User();
+            //添加用户：照片longblob（byte[]）和评论longtext（String）
+            /*User user = new User();
             user.setName("张三4");
             user.setAge(14);
             user.setRemark("很长的本文...");
             byte[] pic = null;
-            try {
-                File file = new File("c://boy.jpg");
-                InputStream fileInputStream = new FileInputStream(file);
-                pic = new byte[fileInputStream.available()];
-                fileInputStream.read(pic);
-                fileInputStream.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            File file = new File("c://boy.jpg");
+            InputStream fileInputStream = new FileInputStream(file);
+            pic = new byte[fileInputStream.available()];
+            fileInputStream.read(pic);
+            fileInputStream.close();
             user.setPic(pic);
-            userMapper.insertStudent(user);
-            sqlSession.commit();
-
-            //
-            Student student = studentMapper.getStudentById(4);
-            System.out.println(student);
-        } catc byte[] pic = student.getPic();
-        h(IOException e) {
-            e. try {
-                printStackTrace();
-            } fina File file = new File("d://boy2.jpg");
-            lly {
-                sq OutputStream outputStream = new FileOutputStream(file);
-                lSession.close();
-            } outputStream.write(pic);
-        } outputStream.close();
-    }catch(
-    Exception e)
-
-    {
-        e.printStackTrace();
+            logger.info("添加用户(照片longblob（byte[]）和评论longtext（String）)");
+            userMapper.insertUser(user);
+            sqlSession.commit();*/
+            //查询用户：照片longblob（byte[]）和评论longtext（String）
+            /*logger.info("查询用户(照片longblob（byte[]）和评论longtext（String）)");
+            User user = userMapper.getUserById(5);
+            System.out.println(user);
+            byte[] pic = user.getPic();
+            File file = new File("c://boy2.jpg");
+            OutputStream outputStream = new FileOutputStream(file);
+            outputStream.write(pic);
+            outputStream.close();*/
+            //查询用户：多参数
+            logger.info("查询用户(照片longblob（byte[]）和评论longtext（String）)，多参数");
+            List<User> userList = userMapper.searchUsersMultiParam("%3%", 12);
+            for (User user : userList) {
+                System.out.println(user);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
     }
-
-    logger.info("添加学生(带条件)");
 }
-    List<Student> studentList = studentMapper.searchStudents6("%3%", 12);
-    		for(Student student:studentList){

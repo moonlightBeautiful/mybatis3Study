@@ -7,9 +7,9 @@ import java.util.List;
 public interface UserMapper {
 
 
-    public int insertStudent(User student);
+    public int insertUser(User student);
 
-    public User getStudentById(Integer id);
+    public User getUserById(Integer id);
 
-    public List<User> searchStudentsMultiParam(String name, int age);
+    public List<User> searchUsersMultiParam(String name, int age);
 }

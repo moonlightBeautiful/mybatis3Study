@@ -10,15 +10,15 @@
         <result property="age" column="age"/>
     </resultMap>
 
-    <insert id="insertStudent" parameterType="User">
+    <insert id="insertUser" parameterType="User">
 		insert into t_user values(null,#{name},#{age},#{pic},#{remark});
 	</insert>
 
-    <select id="getStudentById" parameterType="Integer" resultType="User">
+    <select id="getUserById" parameterType="Integer" resultType="User">
 		select * from t_user where id=#{id}
 	</select>
 
-    <select id="searchStudentsMultiParam" resultMap="UserResult">
+    <select id="searchUsersMultiParam" resultMap="UserResult">
 		select * from t_user where name like #{param1} and age=#{param2}
 	</select>
 </mapper> 
