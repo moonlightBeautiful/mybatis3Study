@@ -34,11 +34,11 @@
         第一种：引入具体的映射文件或者类
             <mappers>
                 <mapper resource="路径.xml" />    //第一种的第1.1种
-         	    <mapper class="路径.类名(无java后缀)" />        //第一种的第1.2种
+         	    <mapper class="路径.,mapper类名(无java后缀)" />        //第一种的第1.2种
             </mappers> 
         第二种：扫描包自动引入映射文件。
              <mappers>
-                 <package name="包路径" />
+                 <package name="mapper.xml包路径" />
               </mappers>
     5.引入log4j
         1.引入log4j.properties文件

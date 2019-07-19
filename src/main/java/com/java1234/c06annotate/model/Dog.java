@@ -1,21 +1,18 @@
-package com.java1234.c05sundry.model;
+package com.java1234.c06annotate.model;
 
-public class User {
+public class Dog {
 
     private Integer id;
     private String name;
     private Integer age;
-    private byte[] pic;
-    private String remark;
 
 
-    public User() {
+    public Dog() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-
-    public User(Integer id, String name, Integer age) {
+    public Dog(Integer id, String name, Integer age) {
         super();
         this.id = id;
         this.name = name;
@@ -23,7 +20,7 @@ public class User {
     }
 
 
-    public User(String name, Integer age) {
+    public Dog(String name, Integer age) {
         super();
         this.name = name;
         this.age = age;
@@ -55,30 +52,9 @@ public class User {
     }
 
 
-    public byte[] getPic() {
-        return pic;
-    }
-
-
-    public void setPic(byte[] pic) {
-        this.pic = pic;
-    }
-
-
-    public String getRemark() {
-        return remark;
-    }
-
-
-    public void setRemark(String remark) {
-        this.remark = remark;
-    }
-
-
     @Override
     public String toString() {
-        return "Dog [id=" + id + ", name=" + name + ", age=" + age
-                + ", remark=" + remark + "]";
+        return "Dog [id=" + id + ", name=" + name + ", age=" + age + "]";
     }
 
 

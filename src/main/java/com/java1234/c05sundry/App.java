@@ -29,7 +29,7 @@ public class App {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 
             //添加用户：照片longblob（byte[]）和评论longtext（String）
-            /*User user = new User();
+            /*Dog user = new Dog();
             user.setName("张三4");
             user.setAge(14);
             user.setRemark("很长的本文...");
@@ -45,7 +45,7 @@ public class App {
             sqlSession.commit();*/
             //查询用户：照片longblob（byte[]）和评论longtext（String）
             /*logger.info("查询用户(照片longblob（byte[]）和评论longtext（String）)");
-            User user = userMapper.getUserById(5);
+            Dog user = userMapper.getUserById(5);
             System.out.println(user);
             byte[] pic = user.getPic();
             File file = new File("c://boy2.jpg");
@@ -54,16 +54,16 @@ public class App {
             outputStream.close();*/
             //查询用户：多参数
            /* logger.info("查询用户(照片longblob（byte[]）和评论longtext（String）)，多参数");
-            List<User> userList = userMapper.searchUsersMultiParam("%3%", 12);
-            for (User user : userList) {
+            List<Dog> userList = userMapper.searchUsersMultiParam("%3%", 12);
+            for (Dog user : userList) {
                 System.out.println(user);
             }*/
             //物理分页
             /*logger.info("查询用户，物理分页");
             int offset = 0, limit = 3;
             RowBounds rowBounds = new RowBounds(offset, limit);
-            List<User> userList = userMapper.findUsersByPhysicalPaging(rowBounds);
-            for (User user : userList) {
+            List<Dog> userList = userMapper.findUsersByPhysicalPaging(rowBounds);
+            for (Dog user : userList) {
                 System.out.println(user);
             }*/
             //逻辑分页
