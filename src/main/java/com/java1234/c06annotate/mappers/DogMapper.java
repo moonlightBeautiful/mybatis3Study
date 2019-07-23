@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
+/**
+ * 注解式基本crud
+ */
 public interface DogMapper {
 
     @Insert("insert into t_dog values(null,#{name},#{age})")

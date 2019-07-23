@@ -1,7 +1,10 @@
 package com.java1234.c06annotate;
 
 import com.java1234.c06annotate.mappers.DogMapper;
-import com.java1234.c06annotate.model.Dog;
+import com.java1234.c06annotate.mappers.OperationMapper;
+import com.java1234.c06annotate.mappers.ProcessFlowMapper;
+import com.java1234.c06annotate.model.Operation;
+import com.java1234.c06annotate.model.ProcessFlow;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -9,7 +12,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.log4j.Logger;
 
 import java.io.InputStream;
-import java.util.List;
 
 /**
  * Hello world!
@@ -24,8 +26,8 @@ public class App {
             inputStream = Resources.getResourceAsStream("mybatis-config.xml");
             SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
             sqlSession = sqlSessionFactory.openSession();
+            //注解式crud
             DogMapper dogMapper = sqlSession.getMapper(DogMapper.class);
-
             //添加小狗
             /*Dog dog = new Dog();
             dog.setName("张三444");
@@ -47,11 +49,31 @@ public class App {
             Dog dog = dogMapper.getDogById(1);
             System.out.println(dog);*/
             //查询用户
-            logger.info("查询小狗");
+            /*logger.info("查询小狗");
             List<Dog> dogList = dogMapper.findDogs();
             for (Dog dog : dogList) {
                 System.out.println(dog);
-            }
+            }*/
+            //注解式关系
+            //一对一（单向）
+            /*logger.info("查找书籍(带作者)");
+            BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
+            Book book = bookMapper.selectBookWithAuthor(3);
+            System.out.println(book);*/
+            //一对多（单向）
+            /*logger.info("查找省(带市)");
+            ProvinceMapper provinceMapper = sqlSession.getMapper(ProvinceMapper.class);
+            Province province = provinceMapper.findById(1);
+            System.out.println(province);*/
+            //一对一和一对多（双向）
+            logger.info("查找工序(带工艺)");
+            OperationMapper operationMapper = sqlSession.getMapper(OperationMapper.class);
+            Operation operation = operationMapper.selectOperationByIdWithProcessFlow(1);
+            System.out.println(operation);
+            logger.info("查找工艺(带工序)");
+            ProcessFlowMapper processFlowMapper = sqlSession.getMapper(ProcessFlowMapper.class);
+            ProcessFlow processFlow = processFlowMapper.selectProcessFlowByIdWithOperations(1);
+            System.out.println(processFlow);
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {

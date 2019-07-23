@@ -8,12 +8,16 @@
         <!-- <package name="com.java1234.*"/>-->
         <!--<typeAlias alias="Student" type="com.java1234.c01hello.model.Student"/>
          <typeAlias alias="Student02" type="com.java1234.c02basicCrud.model.Student"/>
-         <typeAlias alias="Student" type="com.java1234.c03relation.sec01duoVSyi.model.Student"/>
-         <typeAlias alias="Address" type="com.java1234.c03relation.sec01duoVSyi.model.Address"/>-->
+         <typeAlias alias="Student" type="com.java1234.c03relation.sec01yiVSyimodel.Student"/>
+         <typeAlias alias="Address" type="com.java1234.c03relation.sec01yiVSyimodel.Address"/>-->
         <!-- <typeAlias alias="Student" type="com.java1234.c03relation.sec02yiVSduo.model.Student" />
          <typeAlias alias="Grade" type="com.java1234.c03relation.sec02yiVSduo.model.Grade"/>-->
         <!-- <typeAlias alias="Student" type="com.java1234.c04dynamicSql.model.Student"/>-->
         <!--<typeAlias alias="User" type="com.java1234.c05sundry.model.User"/>-->
+       <!-- <typeAlias alias="Dog" type="com.java1234.c06annotate.model.Dog"/>
+        <typeAlias alias="Book" type="com.java1234.c06annotate.model.Book"/>
+        <typeAlias alias="Author" type="com.java1234.c06annotate.model.Author"/>-->
+        <package name="com.java1234.c06annotate.model.*"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -27,7 +31,7 @@
         </environment>
     </environments>
     <mappers>
-        <!--<package name="mappers"/>-->
+        <!--<package name="com.daily.mapper"/>-->
         <!-- <mappers resource="mappers/c01/StudentMapper.xml"/>
          <mappers resource="mappers/c02/StudentMapper.xml"/>
          <mappers resource="mappers/c03/sec01/StudentMapper.xml"/>
@@ -36,6 +40,10 @@
          <mappers resource="mappers/c03/sec02/GradeMapper.xml"/>
         <mapper resource="mappers/c04/StudentMapper.xml"/>-->
         <!--<mapper resource="mappers/c05/UserMapper.xml"/>-->
-        <mapper class="com.java1234.c06annotate.mappers.DogMapper"/>
+        <!--<mapper class="com.java1234.c06annotate.mappers.DogMapper"/>
+        <mapper class="com.java1234.c06annotate.mappers.BookMapper"/>
+        <mapper class="com.java1234.c06annotate.mappers.AuthorMapper"/>
+        <mapper class="com.java1234.c06annotate.mappers.BookTypeMapper"/>-->
+        <package name="com.java1234.c06annotate.mappers"/>
     </mappers>
 </configuration>

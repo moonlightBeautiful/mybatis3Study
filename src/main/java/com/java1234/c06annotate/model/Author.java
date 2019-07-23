@@ -1,34 +1,29 @@
 package com.java1234.c06annotate.model;
 
 /**
- * 注解式crud
+ * Book-Author 一对一(单向)：一本书对应一个作者
  */
-public class Dog {
+public class Author {
 
     private Integer id;
     private String name;
-    private Integer age;
 
-
-    public Dog() {
+    public Author() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-    public Dog(Integer id, String name, Integer age) {
+    public Author(String name) {
+        super();
+        this.name = name;
+    }
+
+
+    public Author(Integer id, String name) {
         super();
         this.id = id;
         this.name = name;
-        this.age = age;
     }
-
-
-    public Dog(String name, Integer age) {
-        super();
-        this.name = name;
-        this.age = age;
-    }
-
 
     public Integer getId() {
         return id;
@@ -46,19 +41,11 @@ public class Dog {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-
     @Override
     public String toString() {
-        return "Dog [id=" + id + ", name=" + name + ", age=" + age + "]";
+        return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
-
-
 }

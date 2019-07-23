@@ -1,4 +1,4 @@
-package com.java1234.c03relation.sec01duoVSyi.model;
+package com.java1234.c03relation.sec01yiVSyi.model;
 
 public class Address {
 

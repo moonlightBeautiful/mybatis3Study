@@ -1,7 +1,7 @@
-package com.java1234.c03relation.sec01duoVSyi;
+package com.java1234.c03relation.sec01yiVSyi;
 
-import com.java1234.c03relation.sec01duoVSyi.mappers.StudentMapper;
-import com.java1234.c03relation.sec01duoVSyi.model.Student;
+import com.java1234.c03relation.sec01yiVSyi.mappers.StudentMapper;
+import com.java1234.c03relation.sec01yiVSyi.model.Student;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
