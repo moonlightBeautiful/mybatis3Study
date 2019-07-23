@@ -5,6 +5,7 @@
 <configuration>
     <properties resource="jdbc.properties"/>
     <typeAliases>
+        <!-- 别名的二种方式 扫描model所在包默认别名、对指定model起别名、-->
         <!-- <package name="com.java1234.*"/>-->
         <!--<typeAlias alias="Student" type="com.java1234.c01hello.model.Student"/>
          <typeAlias alias="Student02" type="com.java1234.c02basicCrud.model.Student"/>
@@ -14,9 +15,9 @@
          <typeAlias alias="Grade" type="com.java1234.c03relation.sec02yiVSduo.model.Grade"/>-->
         <!-- <typeAlias alias="Student" type="com.java1234.c04dynamicSql.model.Student"/>-->
         <!--<typeAlias alias="User" type="com.java1234.c05sundry.model.User"/>-->
-       <!-- <typeAlias alias="Dog" type="com.java1234.c06annotate.model.Dog"/>
-        <typeAlias alias="Book" type="com.java1234.c06annotate.model.Book"/>
-        <typeAlias alias="Author" type="com.java1234.c06annotate.model.Author"/>-->
+        <!-- <typeAlias alias="Dog" type="com.java1234.c06annotate.model.Dog"/>
+         <typeAlias alias="Book" type="com.java1234.c06annotate.model.Book"/>
+         <typeAlias alias="Author" type="com.java1234.c06annotate.model.Author"/>-->
         <package name="com.java1234.c06annotate.model.*"/>
     </typeAliases>
     <environments default="development">
@@ -31,6 +32,7 @@
         </environment>
     </environments>
     <mappers>
+        <!-- 注册映射mapper的三种方式：扫描Mapper所在包默认别名、加载xml、加载mapper类、-->
         <!--<package name="com.daily.mapper"/>-->
         <!-- <mappers resource="mappers/c01/StudentMapper.xml"/>
          <mappers resource="mappers/c02/StudentMapper.xml"/>
