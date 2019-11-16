@@ -1,4 +1,4 @@
-package com.java1234.c01hello.model;
+package com.java1234.model;
 
 public class Student {
 
