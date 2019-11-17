@@ -6,19 +6,8 @@
     <properties resource="jdbc.properties"/>
     <typeAliases>
         <!-- 别名的二种方式 扫描model所在包默认别名、对指定model起别名、-->
-        <!-- <package name="com.java1234.*"/>-->
-        <!--<typeAlias alias="Student" type="com.java1234.c01hello.model.Student"/>
-         <typeAlias alias="Student02" type="com.java1234.c02basicCrud.model.Student"/>
-         <typeAlias alias="Student" type="com.java1234.c03relation.sec01yiVSyimodel.Student"/>
-         <typeAlias alias="Address" type="com.java1234.c03relation.sec01yiVSyimodel.Address"/>-->
-        <!-- <typeAlias alias="Student" type="com.java1234.c03relation.sec02yiVSduo.model.Student" />
-         <typeAlias alias="Grade" type="com.java1234.c03relation.sec02yiVSduo.model.Grade"/>-->
-        <!-- <typeAlias alias="Student" type="com.java1234.c04dynamicSql.model.Student"/>-->
-        <!--<typeAlias alias="User" type="com.java1234.c05sundry.model.User"/>-->
-        <!-- <typeAlias alias="Dog" type="com.java1234.c06annotate.model.Dog"/>
-         <typeAlias alias="Book" type="com.java1234.c06annotate.model.Book"/>
-         <typeAlias alias="Author" type="com.java1234.c06annotate.model.Author"/>-->
-        <package name="com.java1234.c06annotate.model.*"/>
+        <!-- <typeAlias alias="Student" type="com.java1234.com.java1234.model.Student"/>-->
+        <package name="com.java1234.model"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -34,18 +23,18 @@
     <mappers>
         <!-- 注册映射mapper的三种方式：扫描Mapper所在包默认别名、加载xml、加载mapper类、-->
         <!--<package name="com.daily.mapper"/>-->
-        <!-- <mappers resource="mappers/c01/StudentMapper.xml"/>
-         <mappers resource="mappers/c02/StudentMapper.xml"/>
-         <mappers resource="mappers/c03/sec01/StudentMapper.xml"/>
-         <mappers resource="mappers/c03/sec01/AddressMapper.xml"/>
-         <mappers resource="mappers/c03/sec02/StudentMapper.xml"/>
-         <mappers resource="mappers/c03/sec02/GradeMapper.xml"/>
-        <mapper resource="mappers/c04/StudentMapper.xml"/>-->
-        <!--<mapper resource="mappers/c05/UserMapper.xml"/>-->
-        <!--<mapper class="com.java1234.c06annotate.mappers.DogMapper"/>
-        <mapper class="com.java1234.c06annotate.mappers.BookMapper"/>
-        <mapper class="com.java1234.c06annotate.mappers.AuthorMapper"/>
-        <mapper class="com.java1234.c06annotate.mappers.BookTypeMapper"/>-->
-        <package name="com.java1234.c06annotate.mappers"/>
+        <!-- <com.java1234.mappers resource="com.java1234.mappers/c01/StudentMapper.xml"/>
+         <com.java1234.mappers resource="com.java1234.mappers/c02/StudentMapper.xml"/>
+         <com.java1234.mappers resource="com.java1234.mappers/c03/sec01/StudentMapper.xml"/>
+         <com.java1234.mappers resource="com.java1234.mappers/c03/sec01/AddressMapper.xml"/>
+         <com.java1234.mappers resource="com.java1234.mappers/c03/sec02/StudentMapper.xml"/>
+         <com.java1234.mappers resource="com.java1234.mappers/c03/sec02/GradeMapper.xml"/>
+        <mapper resource="com.java1234.mappers/c04/StudentMapper.xml"/>-->
+        <!--<mapper resource="com.java1234.mappers/c05/UserMapper.xml"/>-->
+        <!--<mapper class="com.java1234.c06annotate.com.java1234.mappers.DogMapper"/>
+        <mapper class="com.java1234.c06annotate.com.java1234.mappers.BookMapper"/>
+        <mapper class="com.java1234.c06annotate.com.java1234.mappers.AuthorMapper"/>
+        <mapper class="com.java1234.c06annotate.com.java1234.mappers.BookTypeMapper"/>-->
+        <package name="com.java1234.c06annotate.com.java1234.mappers"/>
     </mappers>
 </configuration>

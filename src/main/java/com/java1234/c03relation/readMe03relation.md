@@ -13,7 +13,7 @@
                 <association property="address" javaType="对象类型">
                     <result property="对象类型属性" column="id"/>
         4. <resultMap type="" id=""> 中 association对象mapper中的方法
-                <association property="对象类型" column="外键" select="包路径.mappers.AddressMapper
+                <association property="对象类型" column="外键" select="包路径.com.java1234.mappers.AddressMapper
                 .根据外键(对象类型的主键)查询对象类型"></association>
                 
 2.一对多关系，比如：学生和年级，一个年级可以可以对应多个学生。

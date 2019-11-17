@@ -25,7 +25,7 @@ public interface OperationMapper {
                     @Result(column = "name", property = "name"),
                     @Result(column = "age", property = "age"),
                     @Result(column = "processFlowId", property = "processFlow", one = @One(select = "com.java1234" +
-                            ".c06annotate.mappers" +
+                            ".c06annotate.com.java1234.mappers" +
                             ".ProcessFlowMapper" +
                             ".selectProcessFlowById")),
             }

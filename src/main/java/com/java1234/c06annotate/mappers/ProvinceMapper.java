@@ -25,7 +25,7 @@ public interface ProvinceMapper {
             {
                     @Result(id = true, column = "id", property = "id"),
                     @Result(column = "name", property = "name"),
-                    @Result(column = "id", property = "cities", many = @Many(select = "com.java1234.c06annotate.mappers" +
+                    @Result(column = "id", property = "cities", many = @Many(select = "com.java1234.c06annotate.com.java1234.mappers" +
                             ".CityMapper" +
                             ".selectProcessFlowById"))
             }

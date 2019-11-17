@@ -21,7 +21,7 @@ public interface ProcessFlowMapper {
                     @Result(id = true, column = "id", property = "id"),
                     @Result(column = "name", property = "name"),
                     @Result(column = "id", property = "operations", many = @Many(select = "com.java1234" +
-                            ".c06annotate.mappers" +
+                            ".c06annotate.com.java1234.mappers" +
                             ".OperationMapper.selectOprationsByProcessFlowId"))
             }
     )

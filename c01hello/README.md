@@ -40,14 +40,14 @@ hello
                    </typeAliases>
         4.mappers引入DAO映射文件，2种方式
             第一种：引入具体的映射文件或者类
-                <mappers>
+                <com.java1234.mappers>
                     <mapper resource="路径.xml" />    //第一种的第1.1种
                     <mapper class="路径.mapper类名" />        //第一种的第1.2种
-                </mappers> 
+                </com.java1234.mappers> 
             第二种：扫描包自动引入映射文件。
-                 <mappers>
+                 <com.java1234.mappers>
                      <package name="能找到mapper.xml文件的包路径" />
-                  </mappers>
+                  </com.java1234.mappers>
     引入log4j
         1.引入log4j.properties文件
             # 输出目标 2个

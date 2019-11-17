@@ -26,7 +26,7 @@ public interface BookMapper {
             {
                     @Result(id = true, column = "id", property = "id"),
                     @Result(column = "name", property = "name"),
-                    @Result(column = "authorId", property = "author", one = @One(select = "com.java1234.c06annotate.mappers" +
+                    @Result(column = "authorId", property = "author", one = @One(select = "com.java1234.c06annotate.com.java1234.mappers" +
                             ".AuthorMapper" +
                             ".findById"))
             }
