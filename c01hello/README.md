@@ -30,11 +30,11 @@ hello
                    <property name="" value="">
                 </properties> 
         3.typeAliases：类型别名，给model类取别名。2种方式。
-             第一种：扫描包自动取别名，别名就是类的名字。
+             第一种：扫描包自动取别名，默认别名就是类的名字。以后用这个
                   <typeAliases> 
                        <package name=" 包的路径"/>  
                   </typeAliases>
-             第二种：依次配置
+             第二种：依次指定具体配置
                    <typeAliases> 
                        <typeAlias alias="指定别名" type="model类的全路径"/>
                    </typeAliases>

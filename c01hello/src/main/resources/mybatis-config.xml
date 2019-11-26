@@ -5,7 +5,7 @@
 <configuration>
     <properties resource="jdbc.properties"/>
     <typeAliases>
-        <!-- 别名的二种方式 扫描model所在包默认别名、对指定model起别名、-->
+        <!-- 别名的二种方式 1.扫描model所在包默认别名、2.对指定model起别名、-->
         <!-- <typeAlias alias="Student" type="com.java1234.com.java1234.model.Student"/>-->
         <package name="com.java1234.model"/>
     </typeAliases>
