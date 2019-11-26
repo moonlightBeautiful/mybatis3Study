@@ -21,21 +21,9 @@
         </environment>
     </environments>
     <mappers>
-        <!-- 注册映射mapper的三种方式：扫描Mapper所在包默认别名、加载xml、加载mapper类、-->
+        <!-- 注册映射mapper的三种方式：1.扫描Mapper所在包、2.加载xml、3.加载mapper类、-->
         <mapper resource="com/java1234/mappers/StudentMapper.xml"/>
         <!--<package name="com.daily.mapper"/>-->
-        <!--
-         <com.java1234.mappers resource="com.java1234.mappers/c02/StudentMapper.xml"/>
-         <com.java1234.mappers resource="com.java1234.mappers/c03/sec01/StudentMapper.xml"/>
-         <com.java1234.mappers resource="com.java1234.mappers/c03/sec01/AddressMapper.xml"/>
-         <com.java1234.mappers resource="com.java1234.mappers/c03/sec02/StudentMapper.xml"/>
-         <com.java1234.mappers resource="com.java1234.mappers/c03/sec02/GradeMapper.xml"/>
-        <mapper resource="com.java1234.mappers/c04/StudentMapper.xml"/>-->
-        <!--<mapper resource="com.java1234.mappers/c05/UserMapper.xml"/>-->
-        <!--<mapper class="com.java1234.c06annotate.com.java1234.mappers.DogMapper"/>
-        <mapper class="com.java1234.c06annotate.com.java1234.mappers.BookMapper"/>
-        <mapper class="com.java1234.c06annotate.com.java1234.mappers.AuthorMapper"/>
-        <mapper class="com.java1234.c06annotate.com.java1234.mappers.BookTypeMapper"/>-->
-        <!--   <package name="com.java1234.c06annotate.com.java1234.mappers"/>-->
+        <!--<mapper class="com.java1234.c06annotate.com.java1234.mappers.DogMapper"/>-->
     </mappers>
 </configuration>
