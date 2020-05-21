@@ -11,6 +11,7 @@
     <modules>
         <module>c01hello</module>
         <module>c02crud</module>
+        <module>c03relation_ManyToOne</module>
     </modules>
 
     <name>mybatis3Study</name>
@@ -31,13 +32,12 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.6</version>
+            <version>8.0.18</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>

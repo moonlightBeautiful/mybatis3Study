@@ -5,9 +5,9 @@
 <configuration>
     <properties resource="jdbc.properties"/>
     <typeAliases>
-        <!-- 别名的二种方式 1.扫描model所在包默认别名、2.对指定model起别名、-->
-        <!-- <typeAlias alias="Student" type="com.java1234.com.java1234.model.Student"/>-->
-        <package name="com.java1234.model"/>
+        <!-- 别名的二种方式 1.扫描model所在包默认别名类名、2.对指定model起指定别名、-->
+        <!-- <typeAlias alias="Student" type="com.ims.com.ims.model.Student"/>-->
+        <package name="com.ims.model"/>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -22,8 +22,8 @@
     </environments>
     <mappers>
         <!-- 注册映射mapper的三种方式：1.扫描Mapper所在包、2.加载xml、3.加载mapper类、-->
-        <mapper resource="com/java1234/mappers/StudentMapper.xml"/>
+        <mapper resource="com/ims/mappers/StudentMapper.xml"/>
         <!--<package name="com.daily.mapper"/>-->
-        <!--<mapper class="com.java1234.c06annotate.com.java1234.mappers.DogMapper"/>-->
+        <!--<mapper class="com.ims.c06annotate.com.ims.mappers.DogMapper"/>-->
     </mappers>
 </configuration>

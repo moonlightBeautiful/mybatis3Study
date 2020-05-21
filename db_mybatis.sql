@@ -65,16 +65,16 @@ CREATE TABLE `t_student`  (
 -- ----------------------------
 -- Records of t_student
 -- ----------------------------
-INSERT INTO `t_student` VALUES (1, '张三', 10);
-INSERT INTO `t_student` VALUES (2, '李四', 11);
-INSERT INTO `t_student` VALUES (3, '王五', 12);
-INSERT INTO `t_student` VALUES (4, '李四', 12);
-INSERT INTO `t_student` VALUES (5, '李四', 12);
-INSERT INTO `t_student` VALUES (6, '李四', 12);
-INSERT INTO `t_student` VALUES (7, '李四', 12);
-INSERT INTO `t_student` VALUES (9, '李四', 12);
-INSERT INTO `t_student` VALUES (10, '李四', 12);
-INSERT INTO `t_student` VALUES (11, '王五', 12);
+INSERT INTO `t_student` VALUES (null, '张三', 10);
+INSERT INTO `t_student` VALUES (null, '李四', 11);
+INSERT INTO `t_student` VALUES (null, '王五', 12);
+INSERT INTO `t_student` VALUES (null, '李四4', 12);
+INSERT INTO `t_student` VALUES (null, '李四5', 12);
+INSERT INTO `t_student` VALUES (null, '李四6', 12);
+INSERT INTO `t_student` VALUES (null, '李四7', 12);
+INSERT INTO `t_student` VALUES (null, '李四8', 12);
+INSERT INTO `t_student` VALUES (null, '李四', 12);
+INSERT INTO `t_student` VALUES (null, '王五', 12);
 
 -- ----------------------------
 -- Table structure for t_student0301
