@@ -11,7 +11,7 @@
     <modules>
         <module>c01hello</module>
         <module>c02daoSqlMapper</module>
-        <module>c03relation_ManyToOne</module>
+        <module>c03relation01_ManyToOne</module>
     </modules>
 
     <properties>
