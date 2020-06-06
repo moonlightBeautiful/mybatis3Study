@@ -15,5 +15,5 @@ public interface StudentMapper {
 
     Student findById(Integer id);
 
-    List<Student> find();
+    List<Student> findAll();
 }

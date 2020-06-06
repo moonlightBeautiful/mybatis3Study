@@ -27,42 +27,37 @@ public class App {
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
 
         /**
-         * 添加
+         * 增
          */
-       /* logger.info("添加学生");
-        Student student = new Student("王五", 12);
-        studentMapper.add(student);*/
+        /*Student student = new Student("王五", 12);
+        studentMapper.add(student);
+        logger.info("添加学生！"+student);*/
 
         /**
-         * 修改
+         * 删
          */
-       /* logger.info("修改学生");
-        Student student = new Student(8, "王五2", 13);
-        studentMapper.update(student);*/
+        /*studentMapper.delete(8);
+        logger.info("删除学生!");*/
 
         /**
-         * 删除
+         * 改
          */
-        /*logger.info("删除学生");
-        studentMapper.delete(8);*/
+       /* Student student = new Student(11, "王五2", 13);
+        studentMapper.update(student);
+        logger.info("修改学生!");*/
 
         /**
-         * 通过ID查找
+         * 查1
          */
-        logger.info("通过ID查找学生");
-        Student student = studentMapper.findById(1);
-        System.out.println(student);
-
+       /* Student student = studentMapper.findById(1);
+        logger.info("通过ID查找学生!" + student);*/
         /**
-         * 查找
+         * 查2
          */
-        /*logger.info("查找所有学生");
-        List<Student> studentList = studentMapper.find();
+        /*List<Student> studentList = studentMapper.findAll();
         for (Student s : studentList) {
-            System.out.println(s);
+            logger.info("查找所有学生!" + s);
         }*/
-
-
 
 
         sqlSession.commit();

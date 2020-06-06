@@ -3,21 +3,19 @@
     用xml文件映射dao接口，实现其方法。
     xml文件映射dao接口
         <mapper namespace="dao接口全路径">
+            <crud相关标签 id="dao方法名" parameterType="入参类型" resultType="返回数据类型">
+                sql语句，取入参#{入参名}
+            </crud相关标签>
         </mapper> 
-    引入映射三种方式
-        1.引入具体的xml映射文件 
-        2.引入具体的dao接口 
-        3.扫描Mapper所在包自动引入(用这种方式)
-使用：
-    List<bean>配置：
-        <resultMap type="Student" id="StudentResult">
-            <id property="id" column="id"/>
-            <result property="name" column="name"/>
-            <result property="age" column="age"/>
-        </resultMap>
-    取bean对象属性：#{属性}
+    当返回数据是List<Bean>类型，预先定义返回类型
+        <resultMap type="Bean类" id="随便取标识">
+       		<id property="Bean类id" column="对应表字段"/>
+       		<result property="Bean类其他属性" column="对应表字段"/>
+       		<result property="Bean类其他属性" column="对应表字段"/>
+       	</resultMap>
+crud示例：
     insert：
-        <insert id="方法名" parameterType="Student 入参"  >
+        <insert id="方法名" parameterType="入参类型">
             insert into t_student values(null,#{name},#{age})
         </insert>
     delete
