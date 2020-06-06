@@ -15,6 +15,7 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         Logger logger = Logger.getLogger(App.class);
+
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -23,7 +24,7 @@ public class App {
         Student student = new Student("李四", 122);
         int result = studentMapper.add(student);
         if (result > 0) {
-            logger.info("向日志写入的信息：添加学生成功！");
+            logger.info("向日志写入的信息：添加学生成功！"+student);
         }
 
         sqlSession.commit();

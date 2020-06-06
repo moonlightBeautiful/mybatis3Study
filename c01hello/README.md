@@ -3,7 +3,7 @@
     开源的面向dao层ORM(对象关系映射框架)框架，映射文件实现dao层方法。
 编码：
     1.引入需要的jar包:mybatis+mysql-connector-java+log4j
-    2.创建数据库db_mybatis，创建表t_student
+    2.创建数据库db_mybatis，创建表t_student,准备点数据
         DROP TABLE IF EXISTS `t_student`;
         CREATE TABLE `t_student`  (
           `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -25,7 +25,7 @@
         配置数据源配置文件：jdbc.properties
         log4j配置文件：log4j.properties
         mybatis配置文件：mybatis-config.xml
-    3.模型类Student 模型类的Dao类StudentMapper
+    3.模型类Student、Dao类StudentMapper
     4.Dao类的映射文件mapper文件StudentMapper.xml
     5.mybatis实现简单的crud
 主配置文件标签学习：
