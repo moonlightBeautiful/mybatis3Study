@@ -1,6 +1,7 @@
 package com.ims.mappers;
 
-import com.java1234.model.Grade;
+
+import com.ims.model.Grade;
 
 public interface GradeMapper {
 

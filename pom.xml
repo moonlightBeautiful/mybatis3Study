@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.java1234</groupId>
+    <groupId>com.ims</groupId>
     <artifactId>mybatis3Study</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -11,7 +10,8 @@
     <modules>
         <module>c01hello</module>
         <module>c02daoSqlMapper</module>
-        <module>c03relation01_ManyToOne</module>
+        <module>c03relation01_manyToOne</module>
+        <module>c03relation02_oneToMany</module>
     </modules>
 
     <properties>
@@ -22,20 +22,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.6</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.18</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.6</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>

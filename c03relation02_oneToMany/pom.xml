@@ -3,22 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>mybatis3Study</artifactId>
-        <groupId>com.java1234</groupId>
+        <groupId>com.ims</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>c03relation1_ManyToOne</artifactId>
-    <name>c03relation01_ManyToOne</name>
+    <artifactId>c03relation02_oneToMany</artifactId>
+    <name>c03relation02_oneToMany</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
-
-    <dependencies>
-
-    </dependencies>
 
     <build>
         <pluginManagement>

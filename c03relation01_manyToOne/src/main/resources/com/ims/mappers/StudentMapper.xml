@@ -50,7 +50,7 @@
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="age" column="age"/>
-        <association property="address" column="id" select="com.ims.mappers.AddressMapper.findById"></association>
+        <association property="address" column="addressId" select="com.ims.mappers.AddressMapper.findById"></association>
     </resultMap>
 
 

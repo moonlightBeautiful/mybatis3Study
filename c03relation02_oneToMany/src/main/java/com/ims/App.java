@@ -1,6 +1,8 @@
 package com.ims;
 
+import com.ims.mappers.GradeMapper;
 import com.ims.mappers.StudentMapper;
+import com.ims.model.Grade;
 import com.ims.model.Student;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -10,6 +12,7 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 /**
  * Hello world!
@@ -20,11 +23,11 @@ public class App {
         InputStream inputStream = Resources.getResourceAsStream("mybatis-config.xml");
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        GradeMapper gradeMapper = sqlSession.getMapper(GradeMapper.class);
 
 
-        Student student = studentMapper.findById(1);
-        logger.info("通过ID查找学生(含地址)！" + student);
+        Grade grade = gradeMapper.findById(2);
+        logger.info("通过ID查找班级！" + grade);
 
 
         sqlSession.commit();
