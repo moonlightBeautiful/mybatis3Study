@@ -12,6 +12,7 @@
         <module>c02daoSqlMapper</module>
         <module>c03relation01_manyToOne</module>
         <module>c03relation02_oneToMany</module>
+        <module>c04dynamicSql</module>
     </modules>
 
     <properties>
